@@ -1,0 +1,133 @@
+/*
+ * Template Name: Unify - Responsive Bootstrap Template
+ * Description: Business, Corporate, Portfolio, E-commerce and Blog Theme.
+ * Version: 1.6
+ * Author: @htmlstream
+ * Website: http://htmlstream.com
+*/
+
+var App = function () {
+    //Bootstrap Tooltips and Popovers
+    function handleBootstrap() {
+        /*Bootstrap Carousel*/
+        jQuery('.carousel').carousel({
+            interval: 15000,
+            pause: 'hover'
+        });
+
+        /*Tooltips*/
+        jQuery('.tooltips').tooltip();
+        jQuery('.tooltips-show').tooltip('show');      
+        jQuery('.tooltips-hide').tooltip('hide');       
+        jQuery('.tooltips-toggle').tooltip('toggle');       
+        jQuery('.tooltips-destroy').tooltip('destroy');       
+
+        /*Popovers*/
+        jQuery('.popovers').popover();
+        jQuery('.popovers-show').popover('show');
+        jQuery('.popovers-hide').popover('hide');
+        jQuery('.popovers-toggle').popover('toggle');
+        jQuery('.popovers-destroy').popover('destroy');
+    }
+
+    //Search Box (Header)
+    function handleSearch() {   
+        jQuery('.search-btn').click(function (e) {
+	        e.preventDefault();
+            if(jQuery('.search-btn').hasClass('fa-search')){
+                jQuery('.search-open').fadeIn(500);
+                jQuery('.search-btn').removeClass('fa-search');
+                jQuery('.search-btn').addClass('fa-times');
+                jQuery('#header-search').focus();
+            } else {
+                jQuery('.search-open').fadeOut(500);
+                jQuery('.search-btn').addClass('fa-search');
+                jQuery('.search-btn').removeClass('fa-times');
+            }   
+        });
+        jQuery('#header-search').keyup(function(e) {
+          if (e.keyCode == 13) {
+            if ($(this).val().length > 0) {
+              window.location.href = "/search#q=" + $(this).val();
+            }
+          }
+        });
+    }
+
+    //Sidebar Navigation Toggle
+    function handleToggle() {
+        jQuery('.list-toggle').on('click', function() {
+            jQuery(this).toggleClass('active');
+        });
+    }
+
+    //Fixed Header
+    function handleHeader() {
+         jQuery(window).scroll(function() {
+            if (jQuery(window).scrollTop()>100){
+                jQuery(".header-fixed .header-sticky").addClass("header-fixed-shrink");
+            }
+            else {
+                jQuery(".header-fixed .header-sticky").removeClass("header-fixed-shrink");
+            }
+        });
+    }
+
+    //Header Mega Menu
+    function handleMegaMenu() {
+        jQuery(document).on('click', '.mega-menu .dropdown-menu', function(e) {
+            e.stopPropagation()
+        })
+    }
+
+  function clearAlert(selector) {
+    selector = selector || 'ajax-result';
+    var s = $('.'+selector);
+    if (s.length) {
+      s.html('');
+    }
+  }
+  function makeAlert(selector, type, body, margin, attrs) {
+    selector = selector || 'ajax-result';
+    type = type || 'success';
+    body = body || '';
+    margin = margin || 0;
+    attrs = attrs || {};
+    var s = $('.'+selector);
+    if (s.length === 0) {
+      var col = $('<div class="col-md-12"></div>');
+      s = $('<div class="'+selector+'"></div>');
+      col.append(s);
+      $('div.container.content > div.row').prepend(col);
+    }
+    if (margin > 0) {
+      s.append($('<div class="margin-bottom-' + margin + '"></div>'));
+    }
+    var alert = $('<div class="alert alert-dismissable fade in"></div>');
+    alert.addClass('alert-'+type);
+    for (var key in attrs) {
+      alert.attr(key, attrs[key]);
+    }
+    alert.append('<button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button');
+    alert.append('<div class="alert-body">'+body+'</div>');
+    s.append(alert);
+  }
+
+    return {
+        init: function () {
+            handleBootstrap();
+            handleSearch();
+            handleToggle();
+            handleHeader();
+            handleMegaMenu();
+        },
+        clearAlert: function(selector) {
+          clearAlert(selector);
+        },
+        makeAlert: function(type, body, margin, selector, attrs) {
+          makeAlert(selector, type, body, margin, attrs);
+        },
+
+    };
+
+}();

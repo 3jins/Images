@@ -1,0 +1,213 @@
+/*
+.wf-loading {
+visibility: hidden;
+}
+
+.wf-active, .wf-inactive {
+visibility: visible;
+}
+  */
+body,
+input,
+button,
+select,
+textarea,
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6,
+.purchase span {
+	/* "source-han-sans-korean" */
+    font-family: "Open Sans","Helvetica Neue", Helvetica, Arial, 'Apple SD Gothic Neo','Noto Sans CJK KR', 'Noto Sans KR', '나눔바른고딕','나눔고딕','NanumGothic','맑은고딕','Malgun Gothic', "Nanum Gothic", sans-serif;
+}
+
+.redactor-editor {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, 'Apple SD Gothic Neo','Noto Sans CJK KR', 'Noto Sans KR', '나눔바른고딕','나눔고딕','NanumGothic','맑은고딕','Malgun Gothic', "Nanum Gothic", ssans-serif !important;
+}
+
+.header .navbar-default .navbar-nav > li > a {
+	font-size: 14px;
+	padding: 9px 20px 9px 15px;
+}
+
+
+@media (min-width: 992px) {
+	.header-fixed .header.header-fixed-shrink .navbar-nav > li > a {
+		padding: 55px 20px 18px 15px;
+	}
+}
+
+.header .dropdown > a:after {
+	right: 10px;
+}
+
+@media (min-width: 1200px) {
+	.header .navbar-default .navbar-nav > li > a {
+		font-size: 14px;
+		padding: 9px 30px 9px 20px;
+	}
+
+	.header .dropdown > a:after {
+		right: 15px;
+	}
+	.header-fixed .header.header-fixed-shrink .navbar-nav > li > a {
+		padding: 55px 30px 18px 20px;
+	}
+}
+
+.header .topbar ul.loginbar > li a .badge {
+	position: relative;
+	top: -4px;
+	left: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.header .topbar ul.loginbar > li a > .badge-important {
+	background-color: #d15b47!important;
+	color: #fff;
+}
+
+.header .navbar-brand {
+  top: -25px;
+  z-index: 10000;
+}
+
+@media (min-width: 992px) {
+  .header .container > .navbar-header {
+    margin-bottom: -30px;
+  }
+}
+@media (max-width: 991px) {
+ .header .navbar-brand {
+  top: 0px;
+} 
+}
+.header .navbar-default .navbar-header .navbar-brand img {
+	width: 262px;
+	height: 60px;
+}
+
+.nav a > .badge {
+	position: relative;
+	top: -4px;
+	left: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.nav a > .badge-important {
+	background-color: #d15b47!important;
+	color: #fff;
+}
+
+
+td.accepted {
+    background-color: #b0f4b0;
+}
+
+td.wronganswer {
+    background-color: #f4b0b0;
+}
+
+.blog-twitter .blog-twitter-inner a.article-subject {
+	color: #333;
+}
+
+.comment .content {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.modal {
+	z-index: 10000;
+}
+
+.header .topbar ul.loginbar > li > a.username, .header .topbar ul.loginbar > li > a.username:hover {
+	text-transform: none;
+}
+
+
+@media (min-width: 992px) {	
+	.header .navbar .search-open {
+		width: 260px;
+	}
+}
+
+code {
+	color: inherit;
+	background-color: inherit;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: Menlo, Monaco, Consolas, 'Source Code Pro', "Courier New", monospace;
+
+}
+
+/* This gets Google to fall into place */
+.social {
+	font-size: 1px;
+}
+
+.social service {
+	margin-top: 5px;
+}
+
+/* This gets Facebook to fall into place */
+.social iframe {
+/* 	vertical-align: middle; */
+}
+
+.social .facebook {
+	margin-right: 2px;
+}
+
+
+.social .twitter {
+	margin-right: 2px;
+	margin-left:1px;
+}
+
+/* Set an optional width for your button wrappers */
+.social span {
+	display: inline-block;
+/* 	width: 110px; */
+}
+
+/* Adjust the widths individually if you like */
+.social .google {
+	width: 60px;
+}
+
+.social .kakao .kakao-link-btn img {
+	height: 20px;
+	width: 70px;
+	vertical-align: baseline;
+	margin-left:2px;
+}
+
+.margin-top-5 { margin-top: 5px;}
+
+.social .comments {
+	font-size: 13px;
+}
+
+.social .pinterest {
+  margin-left: 3px;
+}
+
+.copyright a {
+  color: #bbb !important;
+}
+
+.headline h2 a, .headline h3 a, .headline h4 a {
+  color: inherit;
+}
+
+.monospace {
+	font-family: Menlo, Monaco, 'Source Code Pro', consolas, monospace;
+}
+
+.sky-form label.input  {
+	margin-bottom: inherit;
+}
